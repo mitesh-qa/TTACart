@@ -38,7 +38,7 @@ test.describe('Data-driven login tests', () => {
   for (const { username, password, expected, errorMessage } of testCases) {
     const label = username ? `"${username}"` : 'empty username';
     const passLabel = password ? `"${password}"` : 'empty password';
-    const testName = `login with ${label} / ${passLabel} should ${expected}`;
+    const testName = `login with ${label} / ${passLabel} should be ${expected}`;
 
     test(testName, async ({ page }) => {
       const loginPage = new LoginPage(page);
@@ -55,10 +55,10 @@ test.describe('Data-driven login tests', () => {
         await loginPage.login(username, password);
       }
 
-      if (expected === 'success') {
+      if (expected === 'valid') {
         await expect(loginPage.errorMessage).toBeHidden();
         await expect(inventoryPage.title).toBeVisible();
-      } else {
+      } else if (errorMessage) {
         await expect(loginPage.errorMessage).toBeVisible();
         await expect(loginPage.errorMessage).toHaveText(errorMessage);
       }

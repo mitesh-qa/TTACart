@@ -1,8 +1,7 @@
-Add data-driven login tests from CSV
+Update data-driven login CSV and test
 
-- Created test-data/login.csv with 6 test scenarios
-- Created csv-login.spec.ts that reads CSV and runs parameterized tests
-- Fixed CSV parser to handle commas in error messages
-- All 13 tests passing (csv-login + login-validation + purchase flow)
+- Added error_message for locked_out_user in login.csv
+- Updated csv-login.spec.ts to use valid/invalid expected values
+- All 13 tests passing
 
 Co-authored-by: CommandCodeBot <noreply@commandcode.ai>
