@@ -1,8 +1,0 @@
-Initial commit: POM refactor with page objects
-
-- Created LoginPage, InventoryPage, CartPage, CheckoutPage pages
-- Refactored monolithic test to use Page Object Model
-- Added baseURL to playwright.config.ts
-- Added npm test scripts
-
-Co-authored-by: CommandCodeBot <noreply@commandcode.ai>
