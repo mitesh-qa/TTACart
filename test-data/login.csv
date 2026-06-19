@@ -1,0 +1,7 @@
+username,password,expected,error_message
+standard_user,tta_secret,success,
+invalid_user,wrong_password,error,Epic sadface: Username and password do not match any user in this service
+,some_password,error,Epic sadface: Username is required
+standard_user,,error,Epic sadface: Password is required
+,,error,Epic sadface: Username is required
+locked_out_user,tta_secret,error,Epic sadface: Sorry, this user has been locked out.

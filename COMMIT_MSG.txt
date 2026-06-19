@@ -1,10 +1,8 @@
-Add login validation tests with POM
+Add data-driven login tests from CSV
 
-- Added LoginPage methods: openLoginForm(), submitWithBypass(), expectError()
-- Created tta-login-test.spec.ts with 6 login validation scenarios
-  - Invalid credentials, blank username, blank password, both blank
-  - Locked out user, successful login redirect
-- Fixed LoginPage.goto() to use baseURL from config
-- Cleaned up exploration test file
+- Created test-data/login.csv with 6 test scenarios
+- Created csv-login.spec.ts that reads CSV and runs parameterized tests
+- Fixed CSV parser to handle commas in error messages
+- All 13 tests passing (csv-login + login-validation + purchase flow)
 
 Co-authored-by: CommandCodeBot <noreply@commandcode.ai>
