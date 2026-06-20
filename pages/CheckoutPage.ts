@@ -7,6 +7,7 @@ export class CheckoutPage {
   readonly postalCodeInput: Locator;
   readonly continueButton: Locator;
   readonly title: Locator;
+  readonly errorMessage: Locator;
   readonly finishButton: Locator;
   readonly completeHeader: Locator;
   readonly backToProductsButton: Locator;
@@ -18,6 +19,7 @@ export class CheckoutPage {
     this.postalCodeInput = page.locator('[data-test="postalCode"]');
     this.continueButton = page.locator('[data-test="continue"]');
     this.title = page.locator('[data-test="title"]');
+    this.errorMessage = page.locator('[data-test="error"]');
     this.finishButton = page.locator('[data-test="finish"]');
     this.completeHeader = page.locator('[data-test="complete-header"]');
     this.backToProductsButton = page.locator('[data-test="back-to-products"]');

@@ -1,7 +1,7 @@
-Update data-driven login CSV and test
+Refactor checkout validation test to use Page Object Model
 
-- Added error_message for locked_out_user in login.csv
-- Updated csv-login.spec.ts to use valid/invalid expected values
-- All 13 tests passing
+- Added errorMessage locator to CheckoutPage
+- Converted tta-checkout-validation.spec.ts from raw locators to POM
+- Reused LoginPage, InventoryPage, CartPage, and CheckoutPage
 
 Co-authored-by: CommandCodeBot <noreply@commandcode.ai>
